@@ -9,7 +9,7 @@ window.SITE_CONFIG = {
   // The name shown at the top of your site. A nickname or made-up forecaster
   // name is fine and recommended. Do not put your real name, email, photo,
   // or anything else that identifies you on this site.
-  forecaster_name: "",
+  forecaster_name: "333",
 
   // One short line under the name (optional).
   tagline: "",
@@ -25,8 +25,8 @@ window.SITE_CONFIG = {
   //   "A fundamentals-only model (no polls). Each race's predicted Democratic share combines the district's partisan lean, incumbency, and a forecast of the national House vote from presidential approval, gas prices, income and the midterm penalty.",
   //   "Uncertainty combines one national error shared by every race with a separate error for each race. Seat totals come from 10,000 simulated elections.",
   method: [
-    "",
-    ""
+    "Each race starts from the district's or state's partisan lean plus the national environment. On top of that, an ensemble of a linear model and gradient-boosted trees adds each candidate's personal vote (how far they ran ahead of or behind their district's lean last time), the district's own track record when its lines are unchanged, incumbency and fundraising share. It was trained on 2014-2024 House results.",
+    "The national House vote (53.6% Democratic) blends the generic-ballot average, corrected for its historical lean toward Democrats, with a presidential-approval model. Polls then adjust every race through a Gaussian-process model, so a district poll also moves similar districts in the same state, and all polls share a common error term. Senate races average three fundamentals models and blend in state polls at 55% weight.",
   ],
 
   // Your data files. Leave these alone unless you renamed your files.
